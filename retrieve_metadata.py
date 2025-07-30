@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import subprocess
+import argparse
+
+def extract_pdf_metadata(pdf_path):
+    """
+    Extract PDF forensic metadata using pdfresurrect -i.
+
+    Args:
+        pdf_path (str): Path to the PDF file.
+
+    Returns:
+        dict: Metadata extracted from the PDF.
+    """
+    metadata = {}
+    try:
+        result = subprocess.run(
+            ['./pdfresurrect', '-i', pdf_path],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        lines = result.stdout.strip().splitlines()
+
+        for line in lines:
+            # Stop parsing if an empty separator line is reached
+            if line.strip() == "":
+                continue
+
+            # Handle Version X -- Y objects
+            if line.startswith("Version") and "--" in line and "objects" in line:
+                metadata["object_summary"] = line.strip()
+                continue
+
+            # Handle remaining key: value pairs
+            if ":" in line:
+                key, value = line.split(":", 1)
+                metadata[key.strip()] = value.strip().strip("()")  # remove ( ) from values if any
+
+        return metadata
+
+    except subprocess.CalledProcessError as e:
+        print(f"Error extracting metadata: {e}")
+        return {}
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Extract PDF metadata using pdfresurrect")
+    parser.add_argument("pdf_path", type=str, help="Path to the PDF file")
+    args = parser.parse_args()
+
+    meta = extract_pdf_metadata(args.pdf_path)
+    print("Extracted PDF Metadata:")
+    for key, value in meta.items():
+        print(f"{key}: {value}")

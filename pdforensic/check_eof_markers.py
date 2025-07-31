@@ -12,12 +12,12 @@ def count_pdf_eof_markers(pdf_path):
 
     Returns:
         int: Number of %%EOF markers.
+        -1: If file not found or unreadable.
     """
     try:
         with open(pdf_path, 'rb') as f:
             content = f.read()
 
-        # Decode safely and find all %%EOF markers
         matches = re.findall(rb"%%EOF", content)
         return len(matches)
 
@@ -27,7 +27,10 @@ def count_pdf_eof_markers(pdf_path):
         print(f"Error reading PDF: {e}")
         return -1
 
-if __name__ == "__main__":
+def cli():
+    """
+    Command-line interface for counting %%EOF markers in a PDF file.
+    """
     parser = argparse.ArgumentParser(description="Count %%EOF markers in a PDF file")
     parser.add_argument("pdf_path", type=str, help="Path to the PDF file")
     args = parser.parse_args()
@@ -37,3 +40,6 @@ if __name__ == "__main__":
         print("❌ Could not open or read the PDF.")
     else:
         print(f"Number of %%EOF markers found: {count}")
+
+if __name__ == "__main__":
+    cli()

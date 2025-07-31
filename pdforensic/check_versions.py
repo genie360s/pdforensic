@@ -15,7 +15,7 @@ def check_no_of_versions(pdf_path):
     """
     try:
         result = subprocess.run(
-            ['./pdfresurrect', '-q', pdf_path],
+            ['./bin/pdfresurrect', '-q', pdf_path],
             capture_output=True,
             text=True,
             check=True
@@ -26,14 +26,22 @@ def check_no_of_versions(pdf_path):
             version_str = parts[1].strip()
             if version_str.isdigit():
                 return int(version_str)
+        print(f"Unexpected output: {output}")
+        return 0
     except subprocess.CalledProcessError as e:
         print(f"Error checking PDF versions: {e}")
         return 0
 
-if __name__ == "__main__":
+def cli():
+    """
+    Command-line interface for checking number of PDF versions.
+    """
     parser = argparse.ArgumentParser(description="Check the number of PDF versions using pdfresurrect")
     parser.add_argument("pdf_path", type=str, help="Path to the PDF file")
     args = parser.parse_args()
 
     versions = check_no_of_versions(args.pdf_path)
     print(f"Number of versions found: {versions}")
+
+if __name__ == "__main__":
+    cli()

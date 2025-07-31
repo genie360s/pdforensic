@@ -17,7 +17,7 @@ def recover_pdf_versions(pdf_path):
     """
     try:
         result = subprocess.run(
-            ['./pdfresurrect', '-w', pdf_path],
+            ['./bin/pdfresurrect', '-w', pdf_path],
             capture_output=True,
             text=True,
             check=True
@@ -46,10 +46,16 @@ def recover_pdf_versions(pdf_path):
     except subprocess.CalledProcessError as e:
         return f"Error recovering PDF versions: {e}"
 
-if __name__ == "__main__":
+def cli():
+    """
+    Command-line interface for recovering PDF versions.
+    """
     parser = argparse.ArgumentParser(description="Recover previous PDF versions using pdfresurrect")
     parser.add_argument("pdf_path", type=str, help="Path to the PDF file")
     args = parser.parse_args()
 
     message = recover_pdf_versions(args.pdf_path)
     print(f"\nResult: {message}")
+
+if __name__ == "__main__":
+    cli()

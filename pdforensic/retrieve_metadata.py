@@ -16,7 +16,7 @@ def extract_pdf_metadata(pdf_path):
     metadata = {}
     try:
         result = subprocess.run(
-            ['./pdfresurrect', '-i', pdf_path],
+            ['./bin/pdfresurrect', '-i', pdf_path],
             capture_output=True,
             text=True,
             check=True
@@ -25,7 +25,6 @@ def extract_pdf_metadata(pdf_path):
         lines = result.stdout.strip().splitlines()
 
         for line in lines:
-            # Stop parsing if an empty separator line is reached
             if line.strip() == "":
                 continue
 
@@ -34,10 +33,10 @@ def extract_pdf_metadata(pdf_path):
                 metadata["object_summary"] = line.strip()
                 continue
 
-            # Handle remaining key: value pairs
+            # Handle key: value
             if ":" in line:
                 key, value = line.split(":", 1)
-                metadata[key.strip()] = value.strip().strip("()")  # remove ( ) from values if any
+                metadata[key.strip()] = value.strip().strip("()")
 
         return metadata
 
@@ -45,7 +44,10 @@ def extract_pdf_metadata(pdf_path):
         print(f"Error extracting metadata: {e}")
         return {}
 
-if __name__ == "__main__":
+def cli():
+    """
+    Command-line interface for extracting PDF metadata.
+    """
     parser = argparse.ArgumentParser(description="Extract PDF metadata using pdfresurrect")
     parser.add_argument("pdf_path", type=str, help="Path to the PDF file")
     args = parser.parse_args()
@@ -54,3 +56,6 @@ if __name__ == "__main__":
     print("Extracted PDF Metadata:")
     for key, value in meta.items():
         print(f"{key}: {value}")
+
+if __name__ == "__main__":
+    cli()

@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='pdforensic',
+    name='pdforensic-authentic-check',
     version='0.1.0',
     description='A simple PDF forensic toolkit using pdfresurrect and bash utilities',
     author='Alex Mkwizu',

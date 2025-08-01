@@ -5,8 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='pdforensic-authentic-check',
-    version='0.1.0',
+    version='0.1.2',
     description='A simple PDF forensic toolkit using pdfresurrect and bash utilities',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     author='Alex Mkwizu',
     author_email='alexgmkwizu@gmail.com',
     packages=find_packages(),

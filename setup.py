@@ -38,7 +38,7 @@ class CustomInstallCommand(install):
 
 setup(
     name='pdforensic-authentic-check',
-    version='0.1.4',
+    version='0.1.41',
     description='A simple PDF forensic toolkit using pdfresurrect and bash utilities',
     long_description=long_description,
     long_description_content_type='text/markdown',

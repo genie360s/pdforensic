@@ -21,6 +21,8 @@ def extract_pdf_metadata(pdf_path):
             [pdfresurrect_path, '-i', pdf_path],
             capture_output=True,
             text=True,
+            encoding='utf-8',
+            errors='replace',
             check=True
         )
 

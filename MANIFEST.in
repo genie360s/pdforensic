@@ -1,0 +1,4 @@
+include bin/*
+include README.md
+include LICENSE
+recursive-include pdforensic *.py

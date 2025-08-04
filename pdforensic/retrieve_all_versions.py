@@ -3,6 +3,7 @@
 import subprocess
 import argparse
 import os
+from .utils import get_pdfresurrect_path
 
 def recover_pdf_versions(pdf_path):
     """
@@ -16,8 +17,9 @@ def recover_pdf_versions(pdf_path):
         str: Status message with recovered file listing if applicable.
     """
     try:
+        pdfresurrect_path = get_pdfresurrect_path()
         result = subprocess.run(
-            ['./bin/pdfresurrect', '-w', pdf_path],
+            [pdfresurrect_path, '-w', pdf_path],
             capture_output=True,
             text=True,
             check=True

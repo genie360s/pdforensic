@@ -2,6 +2,7 @@
 
 import subprocess
 import argparse
+from .utils import get_pdfresurrect_path
 
 def check_no_of_versions(pdf_path):
     """
@@ -14,8 +15,9 @@ def check_no_of_versions(pdf_path):
         int: The number of versions found in the PDF file.
     """
     try:
+        pdfresurrect_path = get_pdfresurrect_path()
         result = subprocess.run(
-            ['./bin/pdfresurrect', '-q', pdf_path],
+            [pdfresurrect_path, '-q', pdf_path],
             capture_output=True,
             text=True,
             check=True

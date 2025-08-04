@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='pdforensic-authentic-check',
-    version='0.1.2',
+    version='0.1.3',
     description='A simple PDF forensic toolkit using pdfresurrect and bash utilities',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -13,6 +13,12 @@ setup(
     author_email='alexgmkwizu@gmail.com',
     packages=find_packages(),
     include_package_data=True,
+    package_data={
+        'pdforensic': ['../bin/*'],
+    },
+    data_files=[
+        ('bin', ['bin/pdfresurrect', 'bin/pdfresurrect.1']),
+    ],
     install_requires=[],  # Add any dependencies like PyPDF2 if used
     extras_require={
     "dev": ["pytest"]

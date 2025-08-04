@@ -2,6 +2,7 @@
 
 import subprocess
 import argparse
+from .utils import get_pdfresurrect_path
 
 def extract_pdf_metadata(pdf_path):
     """
@@ -15,8 +16,9 @@ def extract_pdf_metadata(pdf_path):
     """
     metadata = {}
     try:
+        pdfresurrect_path = get_pdfresurrect_path()
         result = subprocess.run(
-            ['./bin/pdfresurrect', '-i', pdf_path],
+            [pdfresurrect_path, '-i', pdf_path],
             capture_output=True,
             text=True,
             check=True

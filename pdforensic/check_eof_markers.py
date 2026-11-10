@@ -3,10 +3,11 @@
 import argparse
 import re
 
+
 def count_pdf_eof_markers(pdf_path):
     """
     Count the number of %%EOF markers in a PDF file.
-    
+
     Args:
         pdf_path (str): Path to the PDF file.
 

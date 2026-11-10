@@ -1,0 +1,203 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "R": 3,
+  "V": 2,
+  "bits": 128,
+  "decrypted": true,
+  "encrypted": true,
+  "owner_password_matched": false,
+  "password": "empty",
+  "permissions": -1028,
+  "stream_method": "rc4",
+  "string_method": "rc4",
+  "user_password_matched": true
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "43843b11c90254b1edc8b33fc9065c27",
+  "path": null,
+  "sha1": "ea21b451a34ab3f2f1677033e305a390237e8ff8",
+  "sha256": "9eb891b231bff137cf96ab05711d58150448d843f922b8a39b9e0391d68d9a94",
+  "size": 1597
+ },
+ "fonts": [
+  {
+   "embedded": false,
+   "name": "Helvetica",
+   "subset": false,
+   "subtype": "Type1"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "abb20e5ed0748aa3ad0326ebf53bb047",
+   "1b2023ea54b786034a4baf9120445cf1"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "Author": "Billing System",
+  "CreationDate": "D:20000101000000+00'00'",
+  "Creator": "anonymous",
+  "Keywords": "",
+  "ModDate": "D:20000101000000+00'00'",
+  "Producer": "ReportLab PDF Library - (opensource)",
+  "Subject": "unspecified",
+  "Title": "Invoice 0042",
+  "Trapped": "/False"
+ },
+ "info_dates": {
+  "CreationDate": "2000-01-01T00:00:00+00:00",
+  "ModDate": "2000-01-01T00:00:00+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     595.2756,
+     841.8898
+    ],
+    "object": 4,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": "anonymous",
+  "evidence": [
+   "Info Producer \"ReportLab PDF Library - (opensource)\" matches ReportLab (Python library)"
+  ],
+  "generation": "programmatic",
+  "origin": "library",
+  "producer": "ReportLab PDF Library - (opensource)",
+  "tools": [
+   {
+    "category": "library",
+    "field": "Info Producer",
+    "role": "pdf_writer",
+    "tool": "ReportLab (Python library)",
+    "value": "ReportLab PDF Library - (opensource)"
+   }
+  ]
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 1597,
+   "id": [
+    "abb20e5ed0748aa3ad0326ebf53bb047",
+    "1b2023ea54b786034a4baf9120445cf1"
+   ],
+   "info": {
+    "Author": "Billing System",
+    "CreationDate": "D:20000101000000+00'00'",
+    "Creator": "anonymous",
+    "Keywords": "",
+    "ModDate": "D:20000101000000+00'00'",
+    "Producer": "ReportLab PDF Library - (opensource)",
+    "Subject": "unspecified",
+    "Title": "Invoice 0042",
+    "Trapped": "/False"
+   },
+   "objects": {
+    "added": 8,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "9eb891b231bff137cf96ab05711d58150448d843f922b8a39b9e0391d68d9a94",
+   "signing": false,
+   "size": 1597,
+   "startxref": 1251,
+   "trailer_keys": [
+    "Encrypt",
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 8,
+  "object_streams": 0,
+  "objects": 8,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] abb20e5ed0748aa3ad0326ebf53bb047 (set at creation) differs from ID[1] 1b2023ea54b786034a4baf9120445cf1 (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   }
+  ],
+  "level": "low",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

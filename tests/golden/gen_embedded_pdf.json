@@ -1,0 +1,166 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 1,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "d397a6193f6e4adff0589e520b055d4e",
+  "path": null,
+  "sha1": "8bb2904d4857852b75a3ed1f3cab5519f0a511a6",
+  "sha256": "ad161ae2d30ae6bc18c968cc5176444ef868f46a8ce45b274278576a4e203589",
+  "size": 1840
+ },
+ "fonts": [
+  {
+   "embedded": false,
+   "name": "Helvetica",
+   "subset": false,
+   "subtype": "Type1"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "0123456789abcdef0123456789abcdef",
+   "0123456789abcdef0123456789abcdef"
+  ],
+  "permanent_equals_changing": true
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20240102030405+00'00'",
+  "Creator": "pdforensic tests",
+  "ModDate": "D:20240102030405+00'00'",
+  "Producer": "pdfgen 1.0",
+  "Title": "Fixture"
+ },
+ "info_dates": {
+  "CreationDate": "2024-01-02T03:04:05+00:00",
+  "ModDate": "2024-01-02T03:04:05+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     612,
+     792
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": "pdforensic tests",
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": "pdfgen 1.0",
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 1840,
+   "id": [
+    "0123456789abcdef0123456789abcdef",
+    "0123456789abcdef0123456789abcdef"
+   ],
+   "info": {
+    "CreationDate": "D:20240102030405+00'00'",
+    "Creator": "pdforensic tests",
+    "ModDate": "D:20240102030405+00'00'",
+    "Producer": "pdfgen 1.0",
+    "Title": "Fixture"
+   },
+   "objects": {
+    "added": 7,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "ad161ae2d30ae6bc18c968cc5176444ef868f46a8ce45b274278576a4e203589",
+   "signing": false,
+   "size": 1840,
+   "startxref": 1528,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 2,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 13,
+  "object_streams": 0,
+  "objects": 7,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [],
+  "level": "none",
+  "modified_after_creation": null,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

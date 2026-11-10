@@ -1,0 +1,185 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "e364d74298f18584ad0c242fe86c96be",
+  "path": null,
+  "sha1": "03573be7cdb532ef9090c7494075a9ea04b7cc2d",
+  "sha256": "e2dd6a46f0f41256b8796770bbbd523179cbbd77aacc6abb045c4151108afcad",
+  "size": 11433
+ },
+ "fonts": [
+  {
+   "embedded": true,
+   "name": "BCDEEE+FreestyleScript-Regular",
+   "subset": true,
+   "subtype": "TrueType"
+  }
+ ],
+ "identifiers": {
+  "id": null,
+  "permanent_equals_changing": null
+ },
+ "images": {
+  "count": 1,
+  "details": [
+   {
+    "bits_per_component": 8,
+    "bytes": 2228,
+    "color_space": "DeviceRGB",
+    "filter": [
+     "DCTDecode"
+    ],
+    "height": 67,
+    "mask": false,
+    "object": 5,
+    "width": 100
+   }
+  ]
+ },
+ "info": {
+  "Subject": "Unknown filter"
+ },
+ "info_dates": {},
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "no_text_no_images",
+    "media_box": [
+     0,
+     0,
+     200,
+     300
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": false
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "no_text_no_images": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "no_text_no_images",
+  "creator": null,
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": null,
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 11433,
+   "id": null,
+   "info": {
+    "Subject": "Unknown filter"
+   },
+   "objects": {
+    "added": 10,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": true,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "e2dd6a46f0f41256b8796770bbbd523179cbbd77aacc6abb045c4151108afcad",
+   "signing": false,
+   "size": 11433,
+   "startxref": 11123,
+   "trailer_keys": [
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "3.3",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {
+   "XXXDecode": 1
+  },
+  "object_headers": 10,
+  "object_streams": 0,
+  "objects": 10,
+  "revision_count": 1,
+  "specification": "not a published PDF version",
+  "trailing_bytes": 0,
+  "version": "3.3"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 7.5.2; ISO 32000-2",
+    "detail": "It declares PDF 3.3; the published versions are 1.0 to 1.7 and 2.0.",
+    "id": "unknown_pdf_version",
+    "severity": "low",
+    "title": "The file declares a PDF version that was never published"
+   },
+   {
+    "basis": "ISO 32000-1 7.4, Table 6",
+    "detail": "/XXXDecode in 1 stream(s). Data behind such a filter cannot be decoded, so it cannot be inspected.",
+    "id": "nonstandard_filter",
+    "severity": "low",
+    "title": "Streams use a filter the PDF standard does not define"
+   },
+   {
+    "basis": "qpdf diagnostics",
+    "detail": "qpdf reported 7 tolerated problem(s), e.g. (object 10 0, offset 11001): unexpected >. This describes the software that wrote the file rather than a later change.",
+    "id": "syntax_warnings",
+    "severity": "info",
+    "title": "The file departs from the PDF syntax in small ways"
+   }
+  ],
+  "level": "low",
+  "modified_after_creation": null,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

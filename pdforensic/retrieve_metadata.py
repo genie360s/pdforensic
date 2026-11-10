@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
-import subprocess
 import argparse
+import subprocess
+
 from .utils import get_pdfresurrect_path
+
 
 def extract_pdf_metadata(pdf_path):
     """

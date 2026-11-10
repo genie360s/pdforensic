@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - run: uvx ruff check .
+
+  test:
+    name: test (${{ matrix.os }}, Python ${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.11", "3.13"]
+    env:
+      # A missing or failed pdfresurrect build is an error here, not a skip.
+      PDFORENSIC_REQUIRE_BINARY: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install (the build hook compiles pdfresurrect)
+        run: uv sync --locked
+      - name: Unit, integration, regression and fuzz tests
+        run: uv run pytest -v
+
+  pdfresurrect:
+    name: pdfresurrect (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build with CMake
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release
+      - name: Smoke test
+        shell: bash
+        run: |
+          exe=build/pdfresurrect
+          if [ -f build/Release/pdfresurrect.exe ]; then exe=build/Release/pdfresurrect.exe; fi
+          "$exe" -q tests/fixtures/mutool_incremental.pdf | tee out.txt
+          grep -q "mutool_incremental.pdf: 2" out.txt
+          "$exe" -q tests/fixtures/reportlab.pdf | grep -q "reportlab.pdf: 1"
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+        with:
+          python-version: "3.13"
+      - name: Build sdist and wheel
+        env:
+          PDFORENSIC_REQUIRE_BINARY: "1"
+        run: uv build
+      - name: Run the built wheel outside the source tree
+        run: |
+          wheel=$(ls "$GITHUB_WORKSPACE"/dist/*.whl)
+          cd "$RUNNER_TEMP"
+          uvx --from "$wheel" pdforensic analyze "$GITHUB_WORKSPACE/tests/fixtures/mutool_incremental.pdf"
+          uvx --from "$wheel" pdf-versions "$GITHUB_WORKSPACE/tests/fixtures/mutool_incremental.pdf"

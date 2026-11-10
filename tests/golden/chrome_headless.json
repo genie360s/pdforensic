@@ -1,0 +1,191 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": "en-US",
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": true,
+  "tagged": true,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "b6c7e01d3ea7aca37dbd1b9b850549a6",
+  "path": null,
+  "sha1": "f99b4eddd293d5ed11015b51547795ded082d5ea",
+  "sha256": "1c414c5e8c8b2ab7fa6e9a9c1844ebec0a954b4776685844671fef2bbea90baa",
+  "size": 15498
+ },
+ "fonts": [
+  {
+   "embedded": true,
+   "name": "AAAAAA+Times-Bold",
+   "subset": true,
+   "subtype": "Type0"
+  },
+  {
+   "embedded": true,
+   "name": "BAAAAA+Times-Roman",
+   "subset": true,
+   "subtype": "Type0"
+  }
+ ],
+ "identifiers": {
+  "id": null,
+  "permanent_equals_changing": null
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20261110134148+00'00'",
+  "Creator": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+  "ModDate": "D:20261110134148+00'00'",
+  "Producer": "Skia/PDF m157",
+  "Title": "Web receipt"
+ },
+ "info_dates": {
+  "CreationDate": "2026-11-10T13:41:48+00:00",
+  "ModDate": "2026-11-10T13:41:48+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 2,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     612,
+     792
+    ],
+    "object": 2,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+  "evidence": [
+   "Info Creator \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\" matches headless Chrome (automated HTML to PDF)",
+   "Info Creator \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36\" matches Chromium-based browser",
+   "Info Producer \"Skia/PDF m157\" matches Chromium Skia PDF backend (Chrome, Edge, Electron)"
+  ],
+  "generation": "programmatic",
+  "origin": "html_renderer",
+  "producer": "Skia/PDF m157",
+  "tools": [
+   {
+    "category": "html_renderer",
+    "field": "Info Creator",
+    "role": "authoring",
+    "tool": "headless Chrome (automated HTML to PDF)",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+   },
+   {
+    "category": "browser",
+    "field": "Info Creator",
+    "role": "authoring",
+    "tool": "Chromium-based browser",
+    "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36"
+   },
+   {
+    "category": "browser",
+    "field": "Info Producer",
+    "role": "pdf_writer",
+    "tool": "Chromium Skia PDF backend (Chrome, Edge, Electron)",
+    "value": "Skia/PDF m157"
+   }
+  ]
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 15498,
+   "id": null,
+   "info": {
+    "CreationDate": "D:20261110134148+00'00'",
+    "Creator": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+    "ModDate": "D:20261110134148+00'00'",
+    "Producer": "Skia/PDF m157",
+    "Title": "Web receipt"
+   },
+   "objects": {
+    "added": 24,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "1c414c5e8c8b2ab7fa6e9a9c1844ebec0a954b4776685844671fef2bbea90baa",
+   "signing": false,
+   "size": 15498,
+   "startxref": 14920,
+   "trailer_keys": [
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 24,
+  "object_streams": 0,
+  "objects": 24,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [],
+  "level": "none",
+  "modified_after_creation": null,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

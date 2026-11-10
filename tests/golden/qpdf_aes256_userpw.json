@@ -1,0 +1,121 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "R": 6,
+  "V": 5,
+  "bits": 256,
+  "decrypted": false,
+  "encrypted": true,
+  "filter": "Standard",
+  "password": "required",
+  "permissions": -1028
+ },
+ "features": null,
+ "file": {
+  "md5": "1991095f620ab520f8409ebb097695f1",
+  "path": null,
+  "sha1": "4390477daf8ba0247512014616f55cb4833cf0cd",
+  "sha256": "04e64eb9247cba56ce7b9e969e893a52e4a7caff85a791a41d05d57f05d0058e",
+  "size": 2418
+ },
+ "fonts": [],
+ "identifiers": {
+  "id": [
+   "abb20e5ed0748aa3ad0326ebf53bb047",
+   "1b2023ea54b786034a4baf9120445cf1"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": null,
+ "info_dates": {},
+ "pages": {
+  "count": 0,
+  "details": [],
+  "details_truncated": false,
+  "kinds": {}
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "no_pages",
+  "creator": null,
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": null,
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 2418,
+   "id": [
+    "abb20e5ed0748aa3ad0326ebf53bb047",
+    "1b2023ea54b786034a4baf9120445cf1"
+   ],
+   "info": null,
+   "objects": null,
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "04e64eb9247cba56ce7b9e969e893a52e4a7caff85a791a41d05d57f05d0058e",
+   "signing": false,
+   "size": 2418,
+   "startxref": 2072,
+   "trailer_keys": [
+    "Encrypt",
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.7",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 8,
+  "object_streams": 0,
+  "objects": null,
+  "revision_count": 1,
+  "specification": "ISO 32000-1:2008",
+  "trailing_bytes": 0,
+  "version": "1.7"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] abb20e5ed0748aa3ad0326ebf53bb047 (set at creation) differs from ID[1] 1b2023ea54b786034a4baf9120445cf1 (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   }
+  ],
+  "level": "low",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [
+  "qpdf could not open the file (a password is required to open the file): only the raw structure is reported"
+ ],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

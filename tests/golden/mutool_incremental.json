@@ -1,0 +1,263 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "dc5d1a02708ee902a98a3724d8c6a984",
+  "path": null,
+  "sha1": "aa9e641cf88ee8f8c00b4248aa6981941ab082c0",
+  "sha256": "a9c7f97ccf01e5d60f91ca297bce5ba7d5584dcc34f6d34879501858df1a65eb",
+  "size": 1807
+ },
+ "fonts": [
+  {
+   "embedded": false,
+   "name": "Helvetica",
+   "subset": false,
+   "subtype": "Type1"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "abb20e5ed0748aa3ad0326ebf53bb047",
+   "adca16768814ad6c6a6d4351332d1d53"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "Author": "Billing System",
+  "CreationDate": "D:20000101000000+00'00'",
+  "Creator": "anonymous",
+  "Keywords": "",
+  "ModDate": "D:20000101000000+00'00'",
+  "Producer": "MuPDF incremental save",
+  "Subject": "unspecified",
+  "Title": "Invoice 0042 (amended)",
+  "Trapped": "/False"
+ },
+ "info_dates": {
+  "CreationDate": "2000-01-01T00:00:00+00:00",
+  "ModDate": "2000-01-01T00:00:00+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     595.2756,
+     841.8898
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": "anonymous",
+  "evidence": [
+   "Info Producer \"MuPDF incremental save\" matches PDF manipulation library or tool"
+  ],
+  "generation": "post_processed",
+  "origin": "editor",
+  "producer": "MuPDF incremental save",
+  "tools": [
+   {
+    "category": "editor",
+    "field": "Info Producer",
+    "role": "pdf_writer",
+    "tool": "PDF manipulation library or tool",
+    "value": "MuPDF incremental save"
+   }
+  ]
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 1385,
+   "id": [
+    "abb20e5ed0748aa3ad0326ebf53bb047",
+    "abb20e5ed0748aa3ad0326ebf53bb047"
+   ],
+   "info": {
+    "Author": "Billing System",
+    "CreationDate": "D:20000101000000+00'00'",
+    "Creator": "anonymous",
+    "Keywords": "",
+    "ModDate": "D:20000101000000+00'00'",
+    "Producer": "ReportLab PDF Library - (opensource)",
+    "Subject": "unspecified",
+    "Title": "Invoice 0042",
+    "Trapped": "/False"
+   },
+   "objects": {
+    "added": 7,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "830b0ab2dfa53f0b6cdc3f0359af23c4b86295e0e87984aeb6686167662d0fb9",
+   "signing": false,
+   "size": 1385,
+   "startxref": 1014,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  },
+  {
+   "catalog_version": null,
+   "changes": [
+    {
+     "change": "modified",
+     "object": 5,
+     "type": "Info"
+    }
+   ],
+   "changes_truncated": false,
+   "end": 1807,
+   "id": [
+    "abb20e5ed0748aa3ad0326ebf53bb047",
+    "adca16768814ad6c6a6d4351332d1d53"
+   ],
+   "info": {
+    "Author": "Billing System",
+    "CreationDate": "D:20000101000000+00'00'",
+    "Creator": "anonymous",
+    "Keywords": "",
+    "ModDate": "D:20000101000000+00'00'",
+    "Producer": "MuPDF incremental save",
+    "Subject": "unspecified",
+    "Title": "Invoice 0042 (amended)",
+    "Trapped": "/False"
+   },
+   "objects": {
+    "added": 0,
+    "deleted": 0,
+    "modified": 1
+   },
+   "offset": 1385,
+   "prev": 1014,
+   "qpdf_warnings": false,
+   "revision": 2,
+   "sealed_by_signature": false,
+   "sha256": "a9c7f97ccf01e5d60f91ca297bce5ba7d5584dcc34f6d34879501858df1a65eb",
+   "signing": false,
+   "size": 422,
+   "startxref": 1631,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Prev",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 2,
+  "header_offset": 0,
+  "header_version": "1.3",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 8,
+  "object_streams": 0,
+  "objects": 7,
+  "revision_count": 2,
+  "specification": "Adobe PDF Reference (PDF 1.3)",
+  "trailing_bytes": 0,
+  "version": "1.3"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 7.5.6",
+    "detail": "Revisions [2] append changes that are not signature-related. Each earlier revision can be recovered byte-for-byte.",
+    "id": "incremental_updates",
+    "severity": "medium",
+    "title": "File was saved incrementally 1 time(s) after it was first written"
+   },
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] abb20e5ed0748aa3ad0326ebf53bb047 (set at creation) differs from ID[1] adca16768814ad6c6a6d4351332d1d53 (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   },
+   {
+    "basis": "ISO 32000-1 14.3.3",
+    "detail": "Revision 1: \"ReportLab PDF Library - (opensource)\"; revision 2: \"MuPDF incremental save\".",
+    "id": "tool_changed_between_revisions",
+    "severity": "medium",
+    "title": "Producer changed in revision 2"
+   },
+   {
+    "basis": "heuristic",
+    "detail": "Info Producer \"MuPDF incremental save\"",
+    "id": "editing_tool_named",
+    "severity": "info",
+    "title": "Metadata names a PDF editing or manipulation tool"
+   }
+  ],
+  "level": "medium",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

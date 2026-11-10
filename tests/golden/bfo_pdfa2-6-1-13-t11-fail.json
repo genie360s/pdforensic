@@ -1,0 +1,231 @@
+{
+ "conformance_claims": [
+  {
+   "conformance": null,
+   "iso": "ISO 19005-2",
+   "source": "XMP pdfaid:part=2 conformance=B",
+   "standard": "PDF/A-2b",
+   "validated": false
+  }
+ ],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": true,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "6078d6e246bb419fe1c8ca9922c3cb2a",
+  "path": null,
+  "sha1": "d74a3e654f35e34e3a7cf3bb57df3993cc17c568",
+  "sha256": "6752b35579f979985ad78bdeff33aa06f790371c7bee0bcc593ebf78599e6f61",
+  "size": 36487
+ },
+ "fonts": [
+  {
+   "embedded": true,
+   "name": "SHJHEG+A#c3'",
+   "subset": true,
+   "subtype": "TrueType"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "5159965c6735e008598bdcc82dd31ac0",
+   "ddce3fc400002702a3461c38b7343efe"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20071106011004+01'00'",
+  "ModDate": "D:20131115160418Z",
+  "Producer": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)"
+ },
+ "info_dates": {
+  "CreationDate": "2007-11-06T01:10:04+01:00",
+  "ModDate": "2013-11-15T16:04:18+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     595,
+     842
+    ],
+    "object": 10,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": null,
+  "evidence": [
+   "Info Producer \"PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)\" matches PDFlib",
+   "XMP pdf:Producer \"PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)\" matches PDFlib"
+  ],
+  "generation": "programmatic",
+  "origin": "library",
+  "producer": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)",
+  "tools": [
+   {
+    "category": "library",
+    "field": "Info Producer",
+    "role": "pdf_writer",
+    "tool": "PDFlib",
+    "value": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)"
+   },
+   {
+    "category": "library",
+    "field": "XMP pdf:Producer",
+    "role": "pdf_writer",
+    "tool": "PDFlib",
+    "value": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)"
+   }
+  ]
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 36487,
+   "id": [
+    "5159965c6735e008598bdcc82dd31ac0",
+    "ddce3fc400002702a3461c38b7343efe"
+   ],
+   "info": {
+    "CreationDate": "D:20071106011004+01'00'",
+    "ModDate": "D:20131115160418Z",
+    "Producer": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)"
+   },
+   "objects": {
+    "added": 15,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "6752b35579f979985ad78bdeff33aa06f790371c7bee0bcc593ebf78599e6f61",
+   "signing": false,
+   "size": 36487,
+   "startxref": 35777,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 15,
+  "object_streams": 0,
+  "objects": 15,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] 5159965c6735e008598bdcc82dd31ac0 (set at creation) differs from ID[1] ddce3fc400002702a3461c38b7343efe (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   },
+   {
+    "basis": "ISO 32000-1 14.3.3",
+    "detail": "ModDate is 2201 days, 15:54:14 later than CreationDate.",
+    "id": "dates_differ",
+    "severity": "low",
+    "title": "Metadata records a modification after creation"
+   }
+  ],
+  "level": "low",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {
+  "about": "",
+  "dc:date": [
+   "2013-11-15T16:04:18Z"
+  ],
+  "dc:format": "application/pdf",
+  "pdf:Producer": "PDFlib Personalization Server 7.0.2p2 (Win32) (via http://bfo.com/products/pdf?version=null)",
+  "pdfaExtension:schemas": [
+   {
+    "pdfaSchema:namespaceURI": "http://ns.adobe.com/pdf/1.3/",
+    "pdfaSchema:prefix": "pdf",
+    "pdfaSchema:property": [
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "A name object indicating whether the document has been modified to include trapping information",
+      "pdfaProperty:name": "Trapped",
+      "pdfaProperty:valueType": "Text"
+     }
+    ],
+    "pdfaSchema:schema": "Adobe PDF Schema"
+   }
+  ],
+  "pdfaid:conformance": "B",
+  "pdfaid:part": "2",
+  "xmp:CreateDate": "2007-11-06T01:10:04+01:00",
+  "xmp:MetadataDate": "2013-11-15T16:04:18Z",
+  "xmp:ModifyDate": "2013-11-15T16:04:18Z",
+  "xmpMM:DocumentID": "uuid:8506DF94-2058-D3AC-2C81-2B917E0EEB12"
+ },
+ "xmp_error": null,
+ "xmp_history": []
+}

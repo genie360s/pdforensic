@@ -1,0 +1,255 @@
+{
+ "conformance_claims": [
+  {
+   "conformance": null,
+   "iso": "ISO 19005-2",
+   "source": "XMP pdfaid:part=2 conformance=B",
+   "standard": "PDF/A-2b",
+   "validated": false
+  }
+ ],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "93feb3f77862f538017474b6161971a9",
+  "path": null,
+  "sha1": "a4bf39d73315e4e2b1214552c48238ca163ffaed",
+  "sha256": "3bdd8afee2203fb29e998df75a69ec37fc417629d629f97b256aacc934b3ee47",
+  "size": 5395
+ },
+ "fonts": [],
+ "identifiers": {
+  "id": [
+   "1838d7bc00001542c6d6c2f93c623dde",
+   "f862e9670000dbc2214d13c4fb9de725"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20131118135418Z",
+  "ModDate": "D:20131118135826Z",
+  "Producer": "http://bfo.com/products/pdf?version=null"
+ },
+ "info_dates": {
+  "CreationDate": "2013-11-18T13:54:18+00:00",
+  "ModDate": "2013-11-18T13:58:26+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 0,
+    "images": 0,
+    "kind": "no_text_no_images",
+    "media_box": [
+     0,
+     0,
+     595,
+     842
+    ],
+    "object": 6,
+    "page": 1,
+    "text_operators": false
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "no_text_no_images": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "no_text_no_images",
+  "creator": null,
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": "http://bfo.com/products/pdf?version=null",
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 5395,
+   "id": [
+    "1838d7bc00001542c6d6c2f93c623dde",
+    "f862e9670000dbc2214d13c4fb9de725"
+   ],
+   "info": {
+    "CreationDate": "D:20131118135418Z",
+    "ModDate": "D:20131118135826Z",
+    "Producer": "http://bfo.com/products/pdf?version=null"
+   },
+   "objects": {
+    "added": 7,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "3bdd8afee2203fb29e998df75a69ec37fc417629d629f97b256aacc934b3ee47",
+   "signing": false,
+   "size": 5395,
+   "startxref": 5070,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 7,
+  "object_streams": 0,
+  "objects": 7,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] 1838d7bc00001542c6d6c2f93c623dde (set at creation) differs from ID[1] f862e9670000dbc2214d13c4fb9de725 (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   },
+   {
+    "basis": "ISO 32000-1 14.3.3",
+    "detail": "ModDate is 0:04:08 later than CreationDate.",
+    "id": "dates_differ",
+    "severity": "low",
+    "title": "Metadata records a modification after creation"
+   }
+  ],
+  "level": "low",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {
+  "dc:date": [
+   "2013-11-18T13:58:26Z"
+  ],
+  "dc:format": "application/pdf",
+  "pdf:Producer": "http://bfo.com/products/pdf?version=null",
+  "pdfaExtension:schemas": [
+   {
+    "pdfaSchema:namespaceURI": "http://ns.adobe.com/pdf/1.3/",
+    "pdfaSchema:prefix": "pdf",
+    "pdfaSchema:property": [
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "A name object indicating whether the document has been modified to include trapping information",
+      "pdfaProperty:name": "Trapped",
+      "pdfaProperty:valueType": "Text"
+     }
+    ],
+    "pdfaSchema:schema": "Adobe PDF Schema"
+   },
+   {
+    "pdfaSchema:namespaceURI": "http://ns.adobe.com/pdfx/1.3/",
+    "pdfaSchema:prefix": "pdfx",
+    "pdfaSchema:property": [
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "A name object indicating whether the document has been modified to include trapping information",
+      "pdfaProperty:name": "Trapped",
+      "pdfaProperty:valueType": "Text"
+     }
+    ],
+    "pdfaSchema:schema": "Adobe PDF/X Schema"
+   },
+   {
+    "pdfaSchema:namespaceURI": "http://ns.adobe.com/xap/1.0/mm/",
+    "pdfaSchema:prefix": "xmpMM",
+    "pdfaSchema:property": [
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "UUID based identifier for specific incarnation of a document",
+      "pdfaProperty:name": "InstanceID",
+      "pdfaProperty:valueType": "URI"
+     }
+    ],
+    "pdfaSchema:schema": "XMP Media Management Schema"
+   },
+   {
+    "pdfaSchema:namespaceURI": "http://www.aiim.org/pdfa/ns/id/",
+    "pdfaSchema:prefix": "pdfaid",
+    "pdfaSchema:property": [
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "Part of PDF/A standard",
+      "pdfaProperty:name": "part",
+      "pdfaProperty:valueType": "Integer"
+     },
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "Amendment of PDF/A standard",
+      "pdfaProperty:name": "amd",
+      "pdfaProperty:valueType": "Text"
+     },
+     {
+      "pdfaProperty:category": "internal",
+      "pdfaProperty:description": "Conformance level of PDF/A standard",
+      "pdfaProperty:name": "conformance",
+      "pdfaProperty:valueType": "Text"
+     }
+    ],
+    "pdfaSchema:schema": "PDF/A ID Schema"
+   }
+  ],
+  "pdfaid:conformance": "B",
+  "pdfaid:part": "2",
+  "xmp:CreateDate": "2013-11-18T13:54:18Z",
+  "xmp:MetadataDate": "2013-11-18T13:58:26Z",
+  "xmp:ModifyDate": "2013-11-18T13:58:26Z"
+ },
+ "xmp_error": null,
+ "xmp_history": []
+}

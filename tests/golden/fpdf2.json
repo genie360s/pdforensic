@@ -1,0 +1,157 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": true,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "8da8aab59b7337fea04ffbd9281c69b4",
+  "path": null,
+  "sha1": "b6e285d574ce482398aaa48ff98e3a7ac62f5367",
+  "sha256": "97604c1221c607e3d54efc1ee9d61e08b3f5a2f34a26b05cc8b5715f17a82ec8",
+  "size": 993
+ },
+ "fonts": [
+  {
+   "embedded": false,
+   "name": "Helvetica",
+   "subset": false,
+   "subtype": "Type1"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "8b612419bdf959c65f125bdd4e2bff99",
+   "8b612419bdf959c65f125bdd4e2bff99"
+  ],
+  "permanent_equals_changing": true
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20261110134147Z"
+ },
+ "info_dates": {
+  "CreationDate": "2026-11-10T13:41:47+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     595.28,
+     841.89
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": null,
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": null,
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 993,
+   "id": [
+    "8b612419bdf959c65f125bdd4e2bff99",
+    "8b612419bdf959c65f125bdd4e2bff99"
+   ],
+   "info": {
+    "CreationDate": "D:20261110134147Z"
+   },
+   "objects": {
+    "added": 7,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "97604c1221c607e3d54efc1ee9d61e08b3f5a2f34a26b05cc8b5715f17a82ec8",
+   "signing": false,
+   "size": 993,
+   "startxref": 683,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 1,
+  "header_offset": 0,
+  "header_version": "1.3",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 7,
+  "object_streams": 0,
+  "objects": 7,
+  "revision_count": 1,
+  "specification": "Adobe PDF Reference (PDF 1.3)",
+  "trailing_bytes": 0,
+  "version": "1.3"
+ },
+ "tamper": {
+  "indicators": [],
+  "level": "none",
+  "modified_after_creation": null,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

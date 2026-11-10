@@ -1,0 +1,179 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "a1c7e0af370cc05ada278ad96353c32f",
+  "path": null,
+  "sha1": "6fc4b6b93fb5bcb66741f05597b877dcea3cea0d",
+  "sha256": "94b949fc0fcd6e81f19a262f5d49be684e6db135ee4bac7b67f22625edac31b7",
+  "size": 997
+ },
+ "fonts": [],
+ "identifiers": {
+  "id": null,
+  "permanent_equals_changing": null
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": null,
+ "info_dates": {},
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 0,
+    "images": 0,
+    "kind": "no_text_no_images",
+    "media_box": [
+     0,
+     0,
+     100,
+     100
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": false
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "no_text_no_images": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "no_text_no_images",
+  "creator": null,
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": null,
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": "1.5",
+   "changes": [],
+   "changes_truncated": false,
+   "end": 742,
+   "id": null,
+   "info": null,
+   "objects": {
+    "added": 4,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "846cc4771a8500e7493c75d910b4cbf08c88dc90dc6c44f37113fd70f77b5527",
+   "signing": false,
+   "size": 742,
+   "startxref": 565,
+   "trailer_keys": [
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  },
+  {
+   "catalog_version": "1.6",
+   "changes": [
+    {
+     "change": "modified",
+     "object": 1,
+     "type": "Catalog"
+    }
+   ],
+   "changes_truncated": false,
+   "end": 997,
+   "id": null,
+   "info": null,
+   "objects": {
+    "added": 0,
+    "deleted": 0,
+    "modified": 1
+   },
+   "offset": 742,
+   "prev": 565,
+   "qpdf_warnings": false,
+   "revision": 2,
+   "sealed_by_signature": false,
+   "sha256": "94b949fc0fcd6e81f19a262f5d49be684e6db135ee4bac7b67f22625edac31b7",
+   "signing": false,
+   "size": 255,
+   "startxref": 886,
+   "trailer_keys": [
+    "Prev",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [],
+ "structure": {
+  "catalog_version": "1.6",
+  "eof_markers": 2,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 5,
+  "object_streams": 0,
+  "objects": 4,
+  "revision_count": 2,
+  "specification": "Adobe PDF Reference (PDF 1.6)",
+  "trailing_bytes": 0,
+  "version": "1.6"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 7.5.6",
+    "detail": "Revisions [2] append changes that are not signature-related. Each earlier revision can be recovered byte-for-byte.",
+    "id": "incremental_updates",
+    "severity": "medium",
+    "title": "File was saved incrementally 1 time(s) after it was first written"
+   }
+  ],
+  "level": "medium",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

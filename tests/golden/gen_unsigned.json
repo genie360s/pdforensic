@@ -1,0 +1,271 @@
+{
+ "conformance_claims": [],
+ "encryption": {
+  "encrypted": false
+ },
+ "features": {
+  "acroform": false,
+  "additional_actions": false,
+  "annotations": {},
+  "counts_estimated": false,
+  "embedded_files": 0,
+  "javascript": 0,
+  "language": null,
+  "launch_actions": 0,
+  "names": [],
+  "open_action": false,
+  "optional_content": false,
+  "outlines": false,
+  "permissions": [],
+  "remote_actions": 0,
+  "structure_tree": false,
+  "tagged": false,
+  "uri_actions": 0,
+  "xfa": false
+ },
+ "file": {
+  "md5": "dafde60627b891079370759569c8c6b9",
+  "path": null,
+  "sha1": "946a9c7cdebbfe1f8a5c85ed7d109bfd5efdefa5",
+  "sha256": "815f055f7a945828596c06b6a2aa6f88e300a0a7fa68e6e3cfc9a921433d5f20",
+  "size": 1670
+ },
+ "fonts": [
+  {
+   "embedded": false,
+   "name": "Helvetica",
+   "subset": false,
+   "subtype": "Type1"
+  }
+ ],
+ "identifiers": {
+  "id": [
+   "0123456789abcdef0123456789abcdef",
+   "fedcba9876543210fedcba9876543210"
+  ],
+  "permanent_equals_changing": false
+ },
+ "images": {
+  "count": 0,
+  "details": []
+ },
+ "info": {
+  "CreationDate": "D:20240102030405+00'00'",
+  "Creator": "pdforensic tests",
+  "ModDate": "D:20240102030405+00'00'",
+  "Producer": "pdfgen 1.0",
+  "Title": "Fixture"
+ },
+ "info_dates": {
+  "CreationDate": "2024-01-02T03:04:05+00:00",
+  "ModDate": "2024-01-02T03:04:05+00:00"
+ },
+ "pages": {
+  "count": 1,
+  "details": [
+   {
+    "annotations": 0,
+    "fonts": 1,
+    "images": 0,
+    "kind": "text",
+    "media_box": [
+     0,
+     0,
+     612,
+     792
+    ],
+    "object": 3,
+    "page": 1,
+    "text_operators": true
+   }
+  ],
+  "details_truncated": false,
+  "kinds": {
+   "text": 1
+  }
+ },
+ "preflight_ticket": null,
+ "provenance": {
+  "content_profile": "text",
+  "creator": "pdforensic tests",
+  "evidence": [],
+  "generation": "unknown",
+  "origin": "unknown",
+  "producer": "pdfgen 1.0",
+  "tools": []
+ },
+ "revisions": [
+  {
+   "catalog_version": null,
+   "changes": [],
+   "changes_truncated": false,
+   "end": 1394,
+   "id": [
+    "0123456789abcdef0123456789abcdef",
+    "0123456789abcdef0123456789abcdef"
+   ],
+   "info": {
+    "CreationDate": "D:20240102030405+00'00'",
+    "Creator": "pdforensic tests",
+    "ModDate": "D:20240102030405+00'00'",
+    "Producer": "pdfgen 1.0",
+    "Title": "Fixture"
+   },
+   "objects": {
+    "added": 8,
+    "deleted": 0,
+    "modified": 0
+   },
+   "offset": 0,
+   "prev": null,
+   "qpdf_warnings": false,
+   "revision": 1,
+   "sealed_by_signature": false,
+   "sha256": "858e92bc9c9d26ffd8395765e173d53de44d3e333411377b3af1715bcbcdc95e",
+   "signing": false,
+   "size": 1394,
+   "startxref": 1062,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  },
+  {
+   "catalog_version": null,
+   "changes": [
+    {
+     "change": "modified",
+     "object": 1,
+     "type": "Catalog"
+    },
+    {
+     "change": "deleted",
+     "object": 7,
+     "type": "Sig"
+    },
+    {
+     "change": "deleted",
+     "object": 8,
+     "type": "Annot/Widget"
+    }
+   ],
+   "changes_truncated": false,
+   "end": 1670,
+   "id": [
+    "0123456789abcdef0123456789abcdef",
+    "fedcba9876543210fedcba9876543210"
+   ],
+   "info": {
+    "CreationDate": "D:20240102030405+00'00'",
+    "Creator": "pdforensic tests",
+    "ModDate": "D:20240102030405+00'00'",
+    "Producer": "pdfgen 1.0",
+    "Title": "Fixture"
+   },
+   "objects": {
+    "added": 0,
+    "deleted": 2,
+    "modified": 1
+   },
+   "offset": 1394,
+   "prev": 1062,
+   "qpdf_warnings": false,
+   "revision": 2,
+   "sealed_by_signature": false,
+   "sha256": "815f055f7a945828596c06b6a2aa6f88e300a0a7fa68e6e3cfc9a921433d5f20",
+   "signing": false,
+   "size": 276,
+   "startxref": 1443,
+   "trailer_keys": [
+    "ID",
+    "Info",
+    "Prev",
+    "Root",
+    "Size"
+   ],
+   "xref_readable": true,
+   "xref_type": "table"
+  }
+ ],
+ "signatures": [
+  {
+   "byte_range": [
+    0,
+    820,
+    950,
+    444
+   ],
+   "byte_range_shape_ok": true,
+   "byte_range_valid": true,
+   "bytes_after_signature": 276,
+   "covers_whole_file": false,
+   "filter": null,
+   "live": false,
+   "object": 7,
+   "signed_length": 1394,
+   "signed_revision": 1,
+   "subfilter": null,
+   "type": null
+  }
+ ],
+ "structure": {
+  "catalog_version": null,
+  "eof_markers": 2,
+  "header_offset": 0,
+  "header_version": "1.4",
+  "hybrid_reference": false,
+  "linearized": false,
+  "linearized_intact": null,
+  "nonstandard_filters": {},
+  "object_headers": 9,
+  "object_streams": 0,
+  "objects": 6,
+  "revision_count": 2,
+  "specification": "Adobe PDF Reference (PDF 1.4)",
+  "trailing_bytes": 0,
+  "version": "1.4"
+ },
+ "tamper": {
+  "indicators": [
+   {
+    "basis": "ISO 32000-1 7.5.6",
+    "detail": "Revisions [2] append changes that are not signature-related. Each earlier revision can be recovered byte-for-byte.",
+    "id": "incremental_updates",
+    "severity": "medium",
+    "title": "File was saved incrementally 1 time(s) after it was first written"
+   },
+   {
+    "basis": "ISO 32000-1 14.4",
+    "detail": "ID[0] 0123456789abcdef0123456789abcdef (set at creation) differs from ID[1] fedcba9876543210fedcba9876543210 (set at last update).",
+    "id": "id_mismatch",
+    "severity": "low",
+    "title": "File identifier shows the file changed after creation"
+   },
+   {
+    "basis": "heuristic",
+    "detail": "A signature dictionary with ByteRange [0, 820, 950, 444] is still in the file, but the current cross-reference data no longer points to it.",
+    "id": "signature_removed",
+    "severity": "high",
+    "title": "Signature in object 7 is no longer part of the document"
+   },
+   {
+    "basis": "ISO 32000-1 7.5.4, 7.5.6",
+    "detail": "2 objects are marked free but their data is still in the file.",
+    "id": "deleted_objects",
+    "severity": "low",
+    "title": "Objects were deleted in a later revision"
+   }
+  ],
+  "level": "high",
+  "modified_after_creation": true,
+  "note": "Indicators are evidence, not proof. A file with no indicators may still have been altered and fully re-saved; signature cryptography is not verified here."
+ },
+ "warnings": [],
+ "xmp": {},
+ "xmp_error": null,
+ "xmp_history": []
+}

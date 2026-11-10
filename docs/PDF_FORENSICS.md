@@ -313,8 +313,8 @@ the byte hits (`features.counts_estimated` is then true).
 - The ISO texts of PDF/A, PDF/X, PDF/E and PDF/VT themselves were not read.
 - Whether a PDF/A, PDF/X or PDF/UA claim is *true* is not checked here at all.
 - That a signature's `/Contents` is exempt from encryption is not relied on.
-- The MSVC build of the C tool and the Python test suite on Windows have not
-  been run (no Windows machine); neither has macOS on Intel. See below.
+- The release workflow has not run yet (it runs on a version tag), and nothing
+  was built or tested on Intel macOS, for which pikepdf ships no wheel.
 
 ## What was run
 
@@ -327,6 +327,7 @@ the byte hits (`features.counts_estimated` is then true).
 | `manylinux` wheels with cibuildwheel and the uv build frontend, release settings | x86_64 and arm64 | built, repaired, tested |
 | Code review and an over-engineering review of the whole change | | 12 + 12 findings, each fixed with a regression test (`tests/test_review.py`) |
 | C tool cross-compiled with MinGW-w64, run under Wine | Windows x86_64 target | builds; `-q`, `-w` and backslash paths work |
+| GitHub Actions CI: lint, suite, CMake build, packaging | Ubuntu, macOS and Windows (MSVC 19.51), Python 3.11 and 3.13 | all 11 jobs pass; 235 tests on Windows, where a file name containing ":" cannot be created |
 | Fuzzing: 300,000 damaged inputs, 12 seeds | macOS | no crash, no hang |
 | 932 real PDFs, page counts compared with qpdf | macOS | no crash, no disagreement |
 | BFO PDF/A test suite, 34 files | macOS | no crash; PDF/A part and level read correctly on every file |

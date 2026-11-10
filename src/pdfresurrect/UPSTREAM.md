@@ -35,4 +35,5 @@ To update: copy the new upstream sources over this directory and re-apply the pa
 - `-w` writes each version as a full copy of the file with an older `startxref`
   appended, not as the original bytes of that version. `pdforensic recover`
   writes the original bytes.
-- File offsets are C `long`: files over 2 GB are not supported on Windows.
+- File offsets are C `long`: files over 2 GB are not supported on Windows. MSVC
+  reports the related integer-size conversions in `pdf.c` as warnings (C4244, C4267).

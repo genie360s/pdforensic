@@ -1,4 +1,4 @@
-include bin/*
-include README.md
-include LICENSE
-recursive-include pdforensic *.py
+include README.md LICENSE CMakeLists.txt
+graft src/pdfresurrect
+graft docs
+recursive-include tests *.py *.pdf *.json

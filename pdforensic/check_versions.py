@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
-import subprocess
 import argparse
+import subprocess
+
 from .utils import get_pdfresurrect_path
+
 
 def check_no_of_versions(pdf_path):
     """
@@ -24,8 +26,7 @@ def check_no_of_versions(pdf_path):
         )
         output = result.stdout.strip()
         if ':' in output:
-            parts = output.split(':')
-            version_str = parts[1].strip()
+            version_str = output.rsplit(':', 1)[1].strip()  # the file name may contain ':'
             if version_str.isdigit():
                 return int(version_str)
         print(f"Unexpected output: {output}")

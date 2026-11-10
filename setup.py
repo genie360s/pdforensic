@@ -1,70 +1,55 @@
-from setuptools import setup, find_packages
-from setuptools.command.install import install
+"""Build hooks: compile the bundled pdfresurrect C tool into the package.
+
+Project metadata lives in pyproject.toml.
+"""
+
 import os
-import stat
-import platform
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+from setuptools import Distribution, setup
+from setuptools.command.bdist_wheel import bdist_wheel
+from setuptools.command.build_py import build_py
+
+SOURCES = ["src/pdfresurrect/main.c", "src/pdfresurrect/pdf.c"]
 
 
-class CustomInstallCommand(install):
-    """Custom install command to set executable permissions on binaries."""
-    
+class BuildWithPdfresurrect(build_py):
     def run(self):
-        install.run(self)
-        # Set executable permissions for the appropriate binary based on OS
-        system = platform.system().lower()
-        if system == 'darwin':  # macOS
-            binary_name = 'mac_pdfresurrect'
-        elif system == 'linux':
-            binary_name = 'linux_pdfresurrect'
+        super().run()
+        from distutils.ccompiler import new_compiler
+        from distutils.sysconfig import customize_compiler
+
+        if self.editable_mode:
+            target = os.path.join("pdforensic", "_bin")
         else:
-            return  # Skip for other systems
-        
-        # Find the installed binary and set permissions
-        for root, dirs, files in os.walk(self.install_base):
-            for file in files:
-                if file == binary_name:
-                    file_path = os.path.join(root, file)
-                    try:
-                        current_permissions = os.stat(file_path).st_mode
-                        new_permissions = current_permissions | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH
-                        os.chmod(file_path, new_permissions)
-                        print(f"Set executable permissions for {file_path}")
-                    except Exception as e:
-                        print(f"Warning: Could not set executable permissions for {file_path}: {e}")
+            target = os.path.join(self.build_lib, "pdforensic", "_bin")
+        try:
+            compiler = new_compiler()
+            customize_compiler(compiler)
+            if compiler.compiler_type == "msvc":
+                compiler.define_macro("_CRT_SECURE_NO_WARNINGS")
+            build_temp = self.get_finalized_command("build").build_temp
+            objects = compiler.compile(SOURCES, output_dir=build_temp)
+            compiler.link_executable(objects, "pdfresurrect", output_dir=target)
+        except Exception as exc:  # no C compiler: the pure-Python analyzer still works
+            if os.environ.get("PDFORENSIC_REQUIRE_BINARY"):
+                raise
+            self.warn("pdfresurrect was not built (%s); the pdf-meta, pdf-recover and "
+                      "pdf-versions commands need it, the analyzer does not." % exc)
 
 
-setup(
-    name='pdforensic-authentic-check',
-    version='0.1.41',
-    description='A simple PDF forensic toolkit using pdfresurrect and bash utilities',
-    long_description=long_description,
-    long_description_content_type='text/markdown',
-    author='Alex Mkwizu',
-    author_email='alexgmkwizu@gmail.com',
-    packages=find_packages(),
-    include_package_data=True,
-    package_data={
-        'pdforensic': ['../bin/*'],
-    },
-    data_files=[
-        ('bin', ['bin/mac_pdfresurrect', 'bin/linux_pdfresurrect', 'bin/pdfresurrect.1']),
-    ],
-    install_requires=[],  # Add any dependencies like PyPDF2 if used
-    extras_require={
-    "dev": ["pytest"]
-    },
-    entry_points={
-        'console_scripts': [
-            'pdf-meta=pdforensic.retrieve_metadata:cli',
-            'pdf-recover=pdforensic.retrieve_all_versions:cli',
-            'pdf-eof=pdforensic.check_eof_markers:cli',
-            'pdf-versions=pdforensic.check_versions:cli'
-        ],
-    },
-    cmdclass={
-        'install': CustomInstallCommand,
-    },
-)
+class BinaryDistribution(Distribution):
+    """Marks the package as platform-specific: it ships a native executable."""
+
+    def has_ext_modules(self):
+        return True
+
+
+class PlatformWheel(bdist_wheel):
+    """The executable does not link against Python, so one wheel serves every
+    Python 3 on a platform: tag it py3-none-<platform>."""
+
+    def get_tag(self):
+        return "py3", "none", super().get_tag()[2]
+
+
+setup(distclass=BinaryDistribution, cmdclass={"build_py": BuildWithPdfresurrect, "bdist_wheel": PlatformWheel})

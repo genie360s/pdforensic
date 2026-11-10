@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
-import subprocess
 import argparse
 import os
+import subprocess
+
 from .utils import get_pdfresurrect_path
+
 
 def recover_pdf_versions(pdf_path):
     """

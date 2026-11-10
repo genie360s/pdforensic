@@ -210,3 +210,9 @@ __marimo__/
 pdf-to-test/
 .DS_Store
 
+
+# built artifacts and recovered files
+pdforensic/_bin/
+*-versions/
+*-revisions/
+.playwright-mcp/

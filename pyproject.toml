@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdforensic-authentic-check"
+dynamic = ["version"]
+description = "PDF forensics: metadata, revision recovery, tamper indicators and provenance"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT AND BSD-3-Clause"
+license-files = ["LICENSE", "src/pdfresurrect/LICENSE"]
+authors = [{ name = "Alex Mkwizu", email = "alexgmkwizu@gmail.com" }]
+keywords = ["pdf", "forensics", "metadata", "pdfresurrect", "tamper-detection"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Security",
+]
+dependencies = ["pikepdf>=9"]  # qpdf: parsing, decoding, decryption
+
+[dependency-groups]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Repository = "https://github.com/genie360s/pdforensic"
+
+[project.scripts]
+pdforensic = "pdforensic.cli:main"
+pdf-meta = "pdforensic.retrieve_metadata:cli"
+pdf-recover = "pdforensic.retrieve_all_versions:cli"
+pdf-eof = "pdforensic.check_eof_markers:cli"
+pdf-versions = "pdforensic.check_versions:cli"
+
+[tool.setuptools]
+packages = ["pdforensic"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pdforensic.__version__" }
+
+[tool.uv]
+# Rebuild the bundled pdfresurrect when its C source or the build hook changes.
+cache-keys = [{ file = "pyproject.toml" }, { file = "setup.py" }, { file = "src/pdfresurrect/*" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 130
+extend-exclude = ["build", "src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["B905"]  # zip() over deliberately uneven sequences (pairwise walks)

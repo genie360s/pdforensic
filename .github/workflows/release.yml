@@ -1,0 +1,118 @@
+name: Release
+
+# Push a tag such as v0.2.0 to build everything and create a GitHub release.
+# Publishing to PyPI is opt-in: set the repository variable PUBLISH_TO_PYPI
+# to "true" and configure PyPI trusted publishing for this workflow
+# (environment "pypi"). Run manually (workflow_dispatch) to build without releasing.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  binaries:
+    name: pdfresurrect ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, name: linux-x86_64 }
+          - { os: ubuntu-24.04-arm, name: linux-arm64 }
+          - { os: macos-latest, name: macos-arm64 }
+          - { os: macos-15-intel, name: macos-x86_64 }
+          - { os: windows-latest, name: windows-x86_64 }
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build --config Release
+      - name: Collect
+        shell: bash
+        run: |
+          mkdir dist
+          if [ -f build/Release/pdfresurrect.exe ]; then
+            cp build/Release/pdfresurrect.exe "dist/pdfresurrect-${{ matrix.name }}.exe"
+          else
+            cp build/pdfresurrect "dist/pdfresurrect-${{ matrix.name }}"
+          fi
+      - uses: actions/upload-artifact@v7
+        with:
+          name: binary-${{ matrix.name }}
+          path: dist/*
+          if-no-files-found: error
+
+  wheels:
+    # Only platforms for which pikepdf (a required dependency) publishes wheels:
+    # there is none for Intel macOS or 32-bit Windows, and the wheel test imports it.
+    name: wheel ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pypa/cibuildwheel@v4.3.5
+        env:
+          # The wheel is tagged py3-none-<platform>, so one build per platform is enough.
+          CIBW_BUILD: "cp312-*"
+          CIBW_BUILD_FRONTEND: "build[uv]"
+          CIBW_SKIP: "*-musllinux_*"
+          CIBW_ARCHS_WINDOWS: "AMD64"
+          CIBW_ENVIRONMENT: PDFORENSIC_REQUIRE_BINARY=1
+          CIBW_TEST_COMMAND: >-
+            python -c "import subprocess; from pdforensic.utils import get_pdfresurrect_path as g; subprocess.run([g()], check=True)"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: wheels-${{ matrix.os }}
+          path: wheelhouse/*.whl
+          if-no-files-found: error
+
+  sdist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - run: uv build --sdist
+      - uses: actions/upload-artifact@v7
+        with:
+          name: sdist
+          path: dist/*.tar.gz
+          if-no-files-found: error
+
+  github-release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [binaries, wheels, sdist]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" --generate-notes
+
+  pypi:
+    if: startsWith(github.ref, 'refs/tags/') && vars.PUBLISH_TO_PYPI == 'true'
+    needs: [wheels, sdist]
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: "{wheels-*,sdist}"
+          path: dist
+          merge-multiple: true
+      - uses: astral-sh/setup-uv@v10.3.3
+      - run: uv publish dist/*

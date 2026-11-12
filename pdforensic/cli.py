@@ -4,11 +4,13 @@ import argparse
 import json
 import sys
 
+from ._version import __version__
 from .forensics import PdfError, analyze, format_report, recover_revisions
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="pdforensic", description="Forensic analysis of PDF files.")
+    parser.add_argument("--version", action="version", version="pdforensic " + __version__)
     sub = parser.add_subparsers(dest="command", required=True)
     a = sub.add_parser("analyze", help="report metadata, revisions, tamper indicators and provenance")
     a.add_argument("pdf")

@@ -1,9 +1,11 @@
 name: Release
 
-# Push a tag such as v0.2.0 to build everything and create a GitHub release.
-# Publishing to PyPI is opt-in: set the repository variable PUBLISH_TO_PYPI
-# to "true" and configure PyPI trusted publishing for this workflow
-# (environment "pypi"). Run manually (workflow_dispatch) to build without releasing.
+# Push the tag v<contents of VERSION> (for example v0.2.0) to build everything
+# and create a GitHub release. Publishing to PyPI from here is opt-in: set the
+# repository variable PUBLISH_TO_PYPI to "true" and configure PyPI trusted
+# publishing for this workflow (environment "pypi"). Otherwise publish the
+# release's wheels and sdist by hand with `uv publish` (see README).
+# Run manually (workflow_dispatch) to build without releasing.
 on:
   push:
     tags: ["v*"]
@@ -13,6 +15,17 @@ permissions:
   contents: read
 
 jobs:
+  version:
+    name: tag matches VERSION
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          test "$GITHUB_REF_NAME" = "v$(cat VERSION)" || {
+            echo "::error::tag $GITHUB_REF_NAME does not match VERSION ($(cat VERSION))"; exit 1; }
+
   binaries:
     name: pdfresurrect ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
@@ -87,7 +100,7 @@ jobs:
 
   github-release:
     if: startsWith(github.ref, 'refs/tags/')
-    needs: [binaries, wheels, sdist]
+    needs: [version, binaries, wheels, sdist]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -103,7 +116,7 @@ jobs:
 
   pypi:
     if: startsWith(github.ref, 'refs/tags/') && vars.PUBLISH_TO_PYPI == 'true'
-    needs: [wheels, sdist]
+    needs: [version, wheels, sdist]
     runs-on: ubuntu-latest
     environment: pypi
     permissions:

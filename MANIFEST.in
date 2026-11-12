@@ -1,4 +1,4 @@
-include README.md LICENSE CMakeLists.txt
+include README.md LICENSE VERSION CHANGELOG.md llms.txt CMakeLists.txt
 graft src/pdfresurrect
 graft docs
 recursive-include tests *.py *.pdf *.json

@@ -5,20 +5,40 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pdforensic-authentic-check"
 dynamic = ["version"]
-description = "PDF forensics: metadata, revision recovery, tamper indicators and provenance"
+description = "PDF forensics toolkit: detect edited or tampered PDFs, recover previous versions, extract metadata (Info, XMP), check signatures and find out how a PDF was created."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT AND BSD-3-Clause"
 license-files = ["LICENSE", "src/pdfresurrect/LICENSE"]
 authors = [{ name = "Alex Mkwizu", email = "alexgmkwizu@gmail.com" }]
-keywords = ["pdf", "forensics", "metadata", "pdfresurrect", "tamper-detection"]
+keywords = [
+    "pdf", "pdf-forensics", "forensics", "digital-forensics", "document-forensics", "pdf-analysis",
+    "pdf-metadata", "metadata", "xmp", "tamper-detection", "pdf-tampering", "edited-pdf", "document-fraud",
+    "document-verification", "fraud-detection", "incremental-update", "pdf-revisions", "pdf-version-recovery",
+    "digital-signature", "pdf-provenance", "pdf-a", "pdf-x", "qpdf", "pikepdf", "pdfresurrect", "dfir", "cli",
+]
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: C",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Legal Industry",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
     "Operating System :: POSIX :: Linux",
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
+    "Programming Language :: C",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Security",
+    "Topic :: Office/Business",
+    "Topic :: Text Processing",
+    "Topic :: Utilities",
 ]
 dependencies = ["pikepdf>=9"]  # qpdf: parsing, decoding, decryption
 
@@ -26,7 +46,11 @@ dependencies = ["pikepdf>=9"]  # qpdf: parsing, decoding, decryption
 dev = ["pytest", "ruff"]
 
 [project.urls]
+Homepage = "https://github.com/genie360s/pdforensic"
+Documentation = "https://github.com/genie360s/pdforensic/blob/main/docs/USER_GUIDE.md"
 Repository = "https://github.com/genie360s/pdforensic"
+Issues = "https://github.com/genie360s/pdforensic/issues"
+Changelog = "https://github.com/genie360s/pdforensic/blob/main/CHANGELOG.md"
 
 [project.scripts]
 pdforensic = "pdforensic.cli:main"
@@ -39,11 +63,11 @@ pdf-versions = "pdforensic.check_versions:cli"
 packages = ["pdforensic"]
 
 [tool.setuptools.dynamic]
-version = { attr = "pdforensic.__version__" }
+version = { file = "VERSION" }  # the single source of the version number
 
 [tool.uv]
 # Rebuild the bundled pdfresurrect when its C source or the build hook changes.
-cache-keys = [{ file = "pyproject.toml" }, { file = "setup.py" }, { file = "src/pdfresurrect/*" }]
+cache-keys = [{ file = "pyproject.toml" }, { file = "setup.py" }, { file = "VERSION" }, { file = "src/pdfresurrect/*" }]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

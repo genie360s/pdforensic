@@ -25,6 +25,7 @@ from decimal import Decimal
 import pikepdf
 
 from ._pdf import _NOT_REGULAR, WS, PdfError, RawPdf, Ref, Stream, parse_indirect, skip_ws, unescape_name
+from ._version import __version__
 
 __all__ = ["analyze", "recover_revisions", "format_report", "PdfError"]
 
@@ -1437,7 +1438,7 @@ def _report(raw, pdf, table, bad, locked, open_error, path, now, password, md5, 
     ids = revisions[-1]["id"]
     report = {
         "file": {"path": path, "size": len(data), "md5": md5.result(), "sha1": sha1.result(), "sha256": sha256},
-        "engine": {"pikepdf": pikepdf.__version__, "qpdf": pikepdf.__libqpdf_version__},
+        "engine": {"pdforensic": __version__, "pikepdf": pikepdf.__version__, "qpdf": pikepdf.__libqpdf_version__},
         "structure": {
             "header_version": raw.version,
             "catalog_version": catalog_version,
@@ -1512,7 +1513,8 @@ def format_report(r):
         "SHA-256     %s" % r["file"]["sha256"],
         "PDF version %s (%s)%s" % (s["version"], s["specification"], ", linearized" if s["linearized"] else ""),
         "Revisions   %d    %%%%EOF markers %d    objects %s    pages %d" % (
-            s["revision_count"], s["eof_markers"], s["objects"], r["pages"]["count"]),
+            s["revision_count"], s["eof_markers"], "unknown" if s["objects"] is None else s["objects"],
+            r["pages"]["count"]),
         "Encrypted   %s" % ("no" if not r["encryption"]["encrypted"] else "yes, %s (password %s)" % (
             "decrypted" if r["encryption"]["decrypted"] else "NOT decrypted", r["encryption"]["password"])),
     ]

@@ -27,7 +27,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python: ["3.11", "3.13"]
+        python: ["3.11", "3.12", "3.13", "3.14"]
     env:
       # A missing or failed pdfresurrect build is an error here, not a skip.
       PDFORENSIC_REQUIRE_BINARY: "1"

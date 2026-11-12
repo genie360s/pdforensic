@@ -59,3 +59,15 @@ def test_errors_exit_with_status_2(tmp_path):
     result = cli("analyze", not_pdf)
     assert result.returncode == 2 and "not a PDF" in result.stderr
     assert cli("analyze", tmp_path / "missing.pdf").returncode == 2
+
+
+def test_version_comes_from_the_version_file():
+    """VERSION at the top of the repository is the single source."""
+    import pathlib
+
+    import pdforensic
+
+    expected = (pathlib.Path(__file__).parent.parent / "VERSION").read_text(encoding="utf-8").strip()
+    assert pdforensic.__version__ == expected
+    assert cli("--version").stdout.strip() == "pdforensic " + expected
+    assert pdforensic.analyze(pdfgen.simple())["engine"]["pdforensic"] == expected

@@ -7,6 +7,17 @@ Files are written byte by byte so each test controls the exact structure
 import re
 import zlib
 
+
+def deflate(data):
+    """A zlib stream holding `data` in one stored block. Written by hand so the
+    bytes are the same on every platform: zlib.compress output differs between
+    zlib and zlib-ng, which some Python builds use."""
+    assert len(data) < 65536
+    n = len(data)
+    return (b"\x78\x01\x01" + n.to_bytes(2, "little") + (n ^ 0xFFFF).to_bytes(2, "little")
+            + data + zlib.adler32(data).to_bytes(4, "big"))
+
+
 CONTENT = b"BT /F1 24 Tf 72 720 Td (Hello forensic world) Tj ET"
 FONT = b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>"
 ID_A = b"0123456789abcdef0123456789abcdef"
@@ -97,7 +108,7 @@ class Builder:
             row = bytes([t]) + a.to_bytes(4, "big") + b.to_bytes(2, "big")
             rows.append(b"\x02" + bytes((x - y) & 255 for x, y in zip(row, prev_row)))
             prev_row = row
-        data = zlib.compress(b"".join(rows))
+        data = deflate(b"".join(rows))
         self.buf += (b"%d 0 obj\n<< /Type /XRef %s /W [1 4 2] /Index [%s] /Filter /FlateDecode "
                      b"/DecodeParms << /Predictor 12 /Columns 7 >> /Length %d >>\nstream\n%s\nendstream\nendobj\n"
                      % (num, self._trailer(trailer), b" ".join(b"%d" % x for x in index), len(data), data))
@@ -165,7 +176,7 @@ def xref_stream():
     for num, text in bodies:
         head += b"%d %d " % (num, len(body))
         body += text + b" "
-    packed = zlib.compress(head + body)
+    packed = deflate(head + body)
     b = Builder("1.5")
     b.stream(4, b"", CONTENT)
     b.stream(10, b"/Type /ObjStm /N %d /First %d /Filter /FlateDecode" % (len(bodies), len(head)), packed)
@@ -258,7 +269,7 @@ def hybrid():
     b = Builder("1.5")
     _base(b, info(producer="pdfgen hybrid"))
     head, body = b"7 0 ", b"<< /Note (stored in an object stream) >> "
-    b.stream(10, b"/Type /ObjStm /N 1 /First %d /Filter /FlateDecode" % len(head), zlib.compress(head + body))
+    b.stream(10, b"/Type /ObjStm /N 1 /First %d /Filter /FlateDecode" % len(head), deflate(head + body))
     objstm_at = b.entries.pop(10)
     stream_at = len(b.buf)
     rows = b"".join(bytes([t]) + a.to_bytes(4, "big") + c.to_bytes(2, "big")

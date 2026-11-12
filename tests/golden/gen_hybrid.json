@@ -24,11 +24,11 @@
   "xfa": false
  },
  "file": {
-  "md5": "34db8f30f2236eb02889377c42d567fe",
+  "md5": "d2ef24858ddd8638020b0cdc6c382e47",
   "path": null,
-  "sha1": "95b2c952b98dc00484f838ca9ae6ae61128aa3c7",
-  "sha256": "f363ad1754c27eb72639376b8f50e2bd01dd7c8047f869e8a25ff437f332d3ad",
-  "size": 1341
+  "sha1": "59bbbd1df21f1bada30f80e39374af4635c73cf2",
+  "sha256": "5ece8408d730c34cb1e821256fc18bf682b051509ce99e56024e4ae1a9b98e1b",
+  "size": 1344
  },
  "fonts": [
   {
@@ -99,7 +99,7 @@
    "catalog_version": null,
    "changes": [],
    "changes_truncated": false,
-   "end": 1341,
+   "end": 1344,
    "id": [
     "0123456789abcdef0123456789abcdef",
     "0123456789abcdef0123456789abcdef"
@@ -121,10 +121,10 @@
    "qpdf_warnings": false,
    "revision": 1,
    "sealed_by_signature": false,
-   "sha256": "f363ad1754c27eb72639376b8f50e2bd01dd7c8047f869e8a25ff437f332d3ad",
+   "sha256": "5ece8408d730c34cb1e821256fc18bf682b051509ce99e56024e4ae1a9b98e1b",
    "signing": false,
-   "size": 1341,
-   "startxref": 1165,
+   "size": 1344,
+   "startxref": 1168,
    "trailer_keys": [
     "ID",
     "Info",

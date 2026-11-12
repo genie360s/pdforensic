@@ -70,6 +70,8 @@ jobs:
         os: [ubuntu-latest, ubuntu-24.04-arm, macos-latest, windows-latest]
     steps:
       - uses: actions/checkout@v7
+      # The uv build frontend needs uv on the runner (Linux build containers bring their own).
+      - uses: astral-sh/setup-uv@v10.3.3
       - uses: pypa/cibuildwheel@v4.3.5
         env:
           # The wheel is tagged py3-none-<platform>, so one build per platform is enough.
